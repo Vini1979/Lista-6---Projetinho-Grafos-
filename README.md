@@ -19,7 +19,7 @@ Disponibilizada pela prefeitura do Recife
 ## Como Usar
 
 1. Clone este repositório:
-2. Certifique-se de colocar o arquivo na pasta indicada(raiz do programa) com o nome setado no programa para que a leitura seja feita
+2. Certifique-se de colocar o arquivo na pasta indicada(raiz do programa) com o nome setado (base.csv, ou o código que vem ao baixar no site(porém esse está comentado no código)) no programa para que a leitura seja feita
 3. Ao gerar as entradas, escolha como inicio um número de 1 à 91, e para quantidade a ser análisada, um número superior ao inicio e que componha até o 91(número de vértices da base)
 
 Clone:
