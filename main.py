@@ -100,7 +100,8 @@ def geraGraficos(G, posicoes, titulo):
 #vamos chamar todas as funcoes, setar a base a ser utilizada e plotar os graficos
 def main():
     #ler o arquivo .csv usando o pandas
-    arquivo = "e6e4ac72-ff15-4c5a-b149-a1943386c031.csv"
+    #arquivo = "e6e4ac72-ff15-4c5a-b149-a1943386c031.csv"
+    arquivo = "base.csv"
     base = pd.read_csv(arquivo)
 
     #solicita o vertice que se quer iniciar e quantos quer analisar
