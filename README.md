@@ -14,12 +14,13 @@ Disponibilizada pela prefeitura do Recife
 ## Pré-requisitos
 
 - Python 3.x
-- Bibliotecas: pandas, matplotlib, geopy
+- Bibliotecas: pandas, matplotlib, geopy, os
 
 ## Como Usar
 
 1. Clone este repositório:
-2. Certifique-se de colocar o arquivo na pasta indicada(raiz do programa) com o nome setado (base.csv, ou o código que vem ao baixar no site(porém esse está comentado no código)) no programa para que a leitura seja feita
+2. Certifique-se de colocar o arquivo na pasta indicada(raiz do programa) com o nome setado (base.csv, ou o código que vem ao baixar no site(porém esse está comentado no código)) no programa para que a leitura seja feita.
+    Esssas instrulções server tanto para executar o projeto em uma IDE local, quanto para a execução no google colab. A leitura do arquivo via colab está comentada no main
 3. Ao gerar as entradas, escolha como inicio um número de 1 à 91, e para quantidade a ser análisada, um número superior ao inicio e que componha até o 91(número de vértices da base)
 
 Clone:
