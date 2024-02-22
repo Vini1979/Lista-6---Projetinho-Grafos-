@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from geopy.distance import geodesic
 import matplotlib.pyplot as plt
@@ -99,9 +100,13 @@ def geraGraficos(G, posicoes, titulo):
 
 #vamos chamar todas as funcoes, setar a base a ser utilizada e plotar os graficos
 def main():
-    #ler o arquivo .csv usando o pandas
-    #arquivo = "e6e4ac72-ff15-4c5a-b149-a1943386c031.csv"
-    arquivo = "base.csv"
+    #ler o arquivo .csv usando o pandas para o colab
+    #arquivo = "base.csv"
+    #base = pd.read_csv(arquivo)
+
+    #ler o arquivo .csv usando o pandas para execução em IDE(local)
+    diretorio = os.path.dirname(os.path.realpath(__file__))
+    arquivo = os.path.join(diretorio, "base.csv")
     base = pd.read_csv(arquivo)
 
     #solicita o vertice que se quer iniciar e quantos quer analisar
