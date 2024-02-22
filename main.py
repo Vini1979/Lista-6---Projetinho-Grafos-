@@ -98,20 +98,41 @@ def geraGraficos(G, posicoes, titulo):
     plt.axis('off')
     plt.show()
 
+#Funcoes criadas para controlar as entradas e evitar erros
+def inicioValido():
+    while True:
+        try:
+            inicio = int(input("Digite o vértice de início (máximo 91): "))
+            if 0 <= inicio <= 91:
+                return inicio
+            else:
+                print("O valor deve estar entre 1 e 91...tente novamente., por favor")
+        except ValueError:
+            print("Digite um número válido...tente novamente, por favor.")
+
+def numVerticesValido(inicio, somaMaxima):
+    while True:
+        try:
+            numVertices = int(input(f"Digite o número de vértices a serem analisados (máximo {somaMaxima - inicio}): "))
+            if 0 < numVertices <= somaMaxima - inicio:
+                return numVertices
+            else:
+                print(f"A soma de 'início' e 'número de vértices' não pode ser maior que {somaMaxima}... tente novamente, por favor.")
+        except ValueError:
+            print("Digite um número válido...tente novamente, por favor.")
+
 #vamos chamar todas as funcoes, setar a base a ser utilizada e plotar os graficos
 def main():
-    #ler o arquivo .csv usando o pandas para o colab
-    #arquivo = "base.csv"
-    #base = pd.read_csv(arquivo)
-
-    #ler o arquivo .csv usando o pandas para execução em IDE(local)
-    diretorio = os.path.dirname(os.path.realpath(__file__))
-    arquivo = os.path.join(diretorio, "base.csv")
+    #ler o arquivo .csv usando o pandas
+    #arquivo = "e6e4ac72-ff15-4c5a-b149-a1943386c031.csv"
+    arquivo = "base.csv"
     base = pd.read_csv(arquivo)
 
     #solicita o vertice que se quer iniciar e quantos quer analisar
-    inicio = int(input("Digite o vértice de início: "))
-    numVertices = int(input("Digite o número de vértices a serem analisados: "))
+    #quantiadade maxima de vertices
+    somaMaxima = 91  #
+    inicio = inicioValido()
+    numVertices = numVerticesValido(inicio, somaMaxima)
 
     #cria o grafo com base nas informacoes passadas
     G = criarGrafo(base, numVertices, inicio)
